@@ -1,0 +1,7 @@
+org/vaadin/demo/Address.class
+org/vaadin/demo/AddressGrid.class
+org/vaadin/demo/AddressEditor$AddressEditorModel.class
+org/vaadin/demo/AddressMock.class
+org/vaadin/demo/AddressEditor.class
+org/vaadin/demo/Editor.class
+org/vaadin/demo/MainView.class

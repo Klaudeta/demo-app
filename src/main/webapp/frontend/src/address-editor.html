@@ -1,0 +1,67 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/vaadin-form-layout/src/vaadin-form-layout.html">
+<link rel="import" href="../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="../bower_components/vaadin-combo-box/src/vaadin-combo-box.html">
+<link rel="import" href="../bower_components/vaadin-checkbox/src/vaadin-checkbox.html">
+<link rel="import" href="../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../bower_components/vaadin-ordered-layout/src/vaadin-horizontal-layout.html">
+<link rel="import" href="../bower_components/vaadin-button/src/vaadin-button.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/vaadin-icons/vaadin-icons.html">
+<link rel="import" href="../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+
+<dom-module id="address-editor">
+    <template>
+<style include="shared-styles">
+            :host {
+                display: block;
+                width:auto;
+            }
+            .toolbar{
+            	max-width: 20em;
+            }
+        </style>
+<vaadin-horizontal-layout id="headerToolbar" class="toolbar">
+ <vaadin-button theme="tertiary" id="newButton">
+  <iron-icon icon="vaadin:plus"></iron-icon>
+ </vaadin-button>
+</vaadin-horizontal-layout>
+<vaadin-vertical-layout>
+ <vaadin-combo-box items="[[items]]" id="countryCombo" label="Country"></vaadin-combo-box>
+ <vaadin-combo-box items="[[items]]" id="stateCombo" label="State"></vaadin-combo-box>
+ <vaadin-horizontal-layout>
+  <div>
+   <label slot="label">Yes</label>
+   <vaadin-checkbox id="yesCheckbox"></vaadin-checkbox>
+  </div>
+  <div>
+   <label slot="label">No</label>
+   <vaadin-checkbox id="noCheckbox"></vaadin-checkbox>
+  </div>
+ </vaadin-horizontal-layout>
+ <vaadin-text-field id="nameTextField" label="Name"></vaadin-text-field>
+ <vaadin-text-field id="addressTextField" label="Address"></vaadin-text-field>
+</vaadin-vertical-layout>
+<vaadin-horizontal-layout theme="margin spacing-xl" id="footerToolbar" class="toolbar">
+ <vaadin-button theme="success primary" id="saveButton">
+   Save 
+ </vaadin-button>
+ <vaadin-button theme="error primary" id="deleteButton">
+   Delete 
+ </vaadin-button>
+</vaadin-horizontal-layout>
+</template>
+    <script>
+        class AddressEditor extends Polymer.Element {
+            static get is() {
+                return 'address-editor';
+            }
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(AddressEditor.is, AddressEditor);
+    </script>
+</dom-module>

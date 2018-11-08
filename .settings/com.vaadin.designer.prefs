@@ -1,0 +1,5 @@
+defaultJavaCompanionFolder=src/main/java/org/vaadin/demo
+defaultTemplateFolder=src/main/webapp/frontend/src
+eclipse.preferences.version=1
+serverAddress=192.168.1.108
+serverPort=64942
